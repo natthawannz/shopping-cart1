@@ -1,4 +1,3 @@
-
 .itemContainer {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -11,61 +10,75 @@
     background-color: #fff;
     align-items: center;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-  
-  .itemContainer:hover {
+}
+
+.itemContainer:hover {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
-  }
-  
-  .itemImage {
+}
+
+.itemImage {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 12px;
     border: 1px solid #eee;
-  }
-  
-  .itemDetails {
+}
+
+.itemDetails {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  
-  .itemName {
+}
+
+.itemName {
     font-size: 1.4rem;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     color: #333;
-  }
-  
-  .itemActions {
+}
+
+.itemActions {
     display: flex;
     align-items: center;
-    gap: 12px;
-  }
-  
-  .itemCount, .itemPrice {
+    gap: 0.75rem;
+}
+
+.itemCount, .itemPrice {
     font-size: 1.2rem;
     font-weight: 500;
-  }
-  
-  .itemPrice {
+}
+
+.itemPrice {
     color: #2c63dc;
-  }
-  
-  .iconButton {
+}
+
+.iconButton {
     background-color: #f0f0f0;
     border: 1px solid #ddd;
     border-radius: 50%;
-    padding: 8px;
+    padding: 0.5rem;
     transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .iconButton:hover {
+    cursor: pointer;
+}
+
+.iconButton:hover {
     background-color: #e0e0e0;
     transform: scale(1.1);
-  }
-  
-  
-  
+}
+
+.iconButton:focus {
+    outline: 2px solid #2c63dc;
+    outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+    .itemContainer {
+        grid-template-columns: 1fr;
+    }
+    
+    .itemActions {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
